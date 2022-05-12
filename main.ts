@@ -8,18 +8,18 @@ input.onButtonPressed(Button.B, function () {
 })
 input.onGesture(Gesture.Shake, function () {
     basic.showNumber(Compteur)
-    if (Compteur != 0) {
+    while (Compteur != 0) {
         Compteur += -1
         basic.showNumber(Compteur)
-        Compteur += -1
-        led.toggle(4, 4)
         basic.pause(1000)
-    } else {
-        basic.showIcon(IconNames.Heart)
-        soundExpression.yawn.play()
+    }
+    if (Compteur == 0) {
+        basic.showIcon(IconNames.Square)
+        soundExpression.giggle.play()
     }
 })
 let Compteur = 0
 basic.showString("321")
 Compteur = 0
 soundExpression.hello.play()
+led.toggle(4, 4)
