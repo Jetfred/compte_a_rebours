@@ -14,7 +14,7 @@ input.onGesture(Gesture.Shake, function () {
     while (Compteur != 0) {
         Compteur += -1
         basic.showNumber(Compteur)
-        basic.pause(1000)
+        basic.pause(500)
     }
     if (Compteur == 0) {
         basic.showIcon(IconNames.Square)
