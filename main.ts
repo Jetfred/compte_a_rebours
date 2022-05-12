@@ -13,12 +13,14 @@ input.onGesture(Gesture.Shake, function () {
     basic.showNumber(Compteur)
     while (Compteur != 0) {
         Compteur += -1
-        basic.showNumber(Compteur)
-        basic.pause(500)
+        basic.pause(1000)
+        led.toggle(2, 2)
     }
     if (Compteur == 0) {
-        basic.showIcon(IconNames.Square)
         soundExpression.giggle.play()
+        basic.showIcon(IconNames.Chessboard)
+        basic.showIcon(IconNames.Diamond)
+        basic.showIcon(IconNames.SmallDiamond)
     }
 })
 let Last_game = 0
@@ -26,5 +28,4 @@ let Compteur = 0
 basic.showString("321")
 Compteur = 0
 soundExpression.hello.play()
-led.toggle(4, 4)
 soundExpression.hello.play()
